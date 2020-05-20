@@ -1,40 +1,54 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Work Sans',sans-serif;
-    background:#f4f4ef;
-    }
-    
-    .col{
-        align-items: center;
-        background-color: aliceblue;
-        display: flex;
-        flex-direction: column;
-        margin: 80px;
-        margin-left: 35%;
-        
-        width: 30%;
-        border: 3px solid black;
-        position: relative;
-    }
-
-    .table {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      .table td, .table th {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-      }
-      
-
-      .table th {
-        padding: 12px;
-        text-align: left;
-        text-align: center;
-        background-color: rgb(133, 141, 133);
-        color: white;
-      }
+@import '~antd/dist/antd.css';
+.link {
+  border: 1px solid black;
+  list-style: none;
+  padding: 4px;
+  font-size: bold;
+  color: black;
+  margin-bottom: -23px;
+}
+.table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  width: 100%;
+}
+.table td,
+.table th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  text-align: center;
+  background-color: #14cfa0;
+  color: #fff;
+}
+.header-main {
+  background-color: #fff;
+  border: 1px solid black;
+}
+.content {
+  background: #fff;
+  border: 1px solid black;
+  min-height: 520px;
+}
+.sider {
+  background: #fff;
+  border: 1px solid black;
+}
+.link-header{
+  border:  1px solid black;
+  height: 40px;;
+  padding: 8px;
+  
+}
+.search{
+  margin-bottom: 40px;
+  width: 100%;
+  border:  1px solid black;
+  height: 40px;
+  padding: 8px;
+}

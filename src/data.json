@@ -1,35 +1,31 @@
 [
     {
-        
-         "X": "4",
-         "Y" : "2"
-     },
-     {
-        
-         "X": "2",
-         "Y": "7"
-     },
-     {
-        
-        "X": "8",
-        "Y": "4"
-     },
-     {
-        
-        "X": "6",
-        "Y": "9"
-     },
-     {
-        "X": "7",
-        "Y": "3"
-     },
-     {
-        "X": "9",
-        "Y": "5"
-     },
-     {
-        "X": "5",
-        "Y": "7"
-
-     }
+       "id" : "proj-123",
+      "title": "Project1",
+      "description": "welcome to Wipro",
+      "sponsor": {
+         "id" :"user-123",
+         "name": "Ajay",
+         "email": "ajay@xyz.com",
+         "designation": "Sponsor"
+      },
+   "metadata":{
+      "lastUpdateddate" : "17/05/2020 20:25 AM",
+      "createDate" : "17/05/2020 20:25 AM"
+   },
+   "team":[
+      {
+         "id" :"user-122",
+         "name": "Amly",
+         "email": "amit@xyz.com",
+         "designation": "Team Lead"
+      },
+      {
+         "id" :"user-124",
+         "name": "Ajay",
+         "email": "ajay@xyz.com",
+         "designation": "Engineer"
+      }
+   ]
+   }
  ]
