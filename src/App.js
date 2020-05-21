@@ -20,44 +20,57 @@ const routes = [
     path: "/proj-1",
 
     sidebar: () => <h1>My Projects-Project 1</h1>,
+    main: ()=> <h1>My Projects-Project 1</h1>
 
   },
   {
     path: "/proj-2",
 
     sidebar: () => <h1>My Projects-Project 2</h1>,
-
+     main: ()=> <h1>My Projects-Project 2</h1>
   },
   {
     path: "/proj-3",
 
     sidebar: () => <h1>My Projects-Project 3</h1>,
+    main: ()=> <h1>My Projects-Project 3</h1>
 
   },
   {
     path: "/proj-4",
 
     sidebar: () => <h1>My Projects-Project 4</h1>,
+    main: ()=> <h1>My Projects-Project 4</h1>
 
   }
 ]
+
+const Project1 =({match}) =>{
+  return(
+    <h1>{match.prams.summ}</h1>
+  )
+}
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isSummary: false,
+      
       isTeam: false,
-      isTitle: false
+      isTitle: false,
+      isContent: false,
+      isSummary:false
     }
   }
 
 
 
   handleClick1 = () => {
+    
     this.setState({
       isTitle: true,
-      isSummary: true,
+      isSummary:true,
+      isContent:true,
       isTeam: true
     })
   }
@@ -70,16 +83,16 @@ class App extends React.Component {
           <Layout>
             <Header className="header-main">
 
-              {this.state.isTitle ? routes.map((route) => (
-
+              {this.state.isTitle ? routes.map((route,index) => (
+          
                 <Route
-                  key={route.path}
-                  path={route.path}
-                  exact={route.exact}
+                key = {index}
+                path= {route.path}
+                exact = {route.exact}
                   component={route.sidebar}
                 />
 
-              )) : <h1>No Project Selected</h1>}
+              )) : <h1>My Project</h1>}
             </Header>
 
             <Layout>
@@ -87,25 +100,37 @@ class App extends React.Component {
                 <input className="search" type="text" placeholder="search..." />
 
                 <Link to="/"></Link><br />
-                <li className="link"><Link onClick={this.handleClick1} to="/proj-1"><h1>Project 1</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
+                <li className="link"><Link   onClick={this.handleClick1} to="/proj-1"><h1>Project1</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
                 <li className="link"><Link onClick={this.handleClick1} to="/proj-2"><h1>Project 2</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
                 <li className="link"><Link onClick={this.handleClick1} to="/proj-3"><h1>Project 3</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
                 <li className="link"><Link onClick={this.handleClick1} to="/proj-4"><h1>Project 4</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
 
               </Sider>
               <Layout>
-
+                
                 <Content className="content">
                   <div className="link-header">
-                    <Link to="/proj-123/summary">Summary</Link><span> | </span>
-                    <Link to="/proj-123/team">Team Details</Link>
+                    
+                    
+                    {this.state.isSummary ? 
+                     <Link  to="/proj-1/summary" >Summary</Link> :
+                     <Link onClick = {e=> e.preventDefault()} to="/proj-1/summary" >Summary</Link>}<span> | </span>
+
+
+                   {this.state.isTeam ? 
+                   <Link to="/proj-1/team">Team Details</Link>:
+                   <Link onClick = {e=> e.preventDefault()} to="/proj-1/team">Team Details</Link>}
                   </div>
 
-                  <Route path="/proj-123/summary" > {this.state.isSummary ? <Summary /> : ""}</Route>
-                  <Route exact path="/proj-123/team"> {this.state.isTeam ? <Team /> : ""} </Route>
+                  {/* <Route path="/proj-1234/summary"  component = {Project1} > </Route> */}
+                  
 
+                  
+                  <Route exact path="/proj-1/team"> {this.state.isTeam ? <Team /> : ""} </Route>
+                  
+                  {this.state.isContent ? "welcome to wipro" : <h1>No project Selected</h1>}
                 </Content>
-
+                   
               </Layout>
             </Layout>
           </Layout>
