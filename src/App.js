@@ -100,10 +100,10 @@ class App extends React.Component {
                 <input className="search" type="text" placeholder="search..." />
 
                 <Link to="/"></Link><br />
-                <li className="link"><Link   onClick={this.handleClick1} to="/proj-1"><h1>Project1</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
-                <li className="link"><Link onClick={this.handleClick1} to="/proj-2"><h1>Project 2</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
-                <li className="link"><Link onClick={this.handleClick1} to="/proj-3"><h1>Project 3</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
-                <li className="link"><Link onClick={this.handleClick1} to="/proj-4"><h1>Project 4</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
+                <li className="link"><Link   onClick={this.handleClick1} to="/proj-1/summary"><h1>Project1</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
+                <li className="link"><Link onClick={this.handleClick1} to="/proj-2/summary"><h1>Project 2</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
+                <li className="link"><Link onClick={this.handleClick1} to="/proj-3/summary"><h1>Project 3</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
+                <li className="link"><Link onClick={this.handleClick1} to="/proj-4/summary"><h1>Project 4</h1></Link><div>Owner: XYZ, Date: 19/05/2020</div></li><br />
 
               </Sider>
               <Layout>
