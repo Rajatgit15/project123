@@ -66,3 +66,9 @@ th{
 .disabled-link{
   pointer-events: none;
 }
+
+.title-wip{
+  margin:40px;
+  text-align: center;
+  font-size: 3em;
+}

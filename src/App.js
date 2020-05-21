@@ -118,8 +118,8 @@ class App extends React.Component {
 
 
                    {this.state.isTeam ? 
-                   <Link to="/proj-1/team">Team Details</Link>:
-                   <Link onClick = {e=> e.preventDefault()} to="/proj-1/team">Team Details</Link>}
+                   <Link   to="/proj-1/team">Team Details</Link>:
+                   <Link onClick = {e=> e.preventDefault()}  to="/proj-1/team">Team Details</Link>}
                   </div>
 
                   {/* <Route path="/proj-1234/summary"  component = {Project1} > </Route> */}
@@ -128,7 +128,7 @@ class App extends React.Component {
                   
                   <Route exact path="/proj-1/team"> {this.state.isTeam ? <Team /> : ""} </Route>
                   
-                  {this.state.isContent ? "welcome to wipro" : <h1>No project Selected</h1>}
+                  {this.state.isContent ? <h1 className="title-wip">welcome to wipro</h1> : <h1>No project Selected</h1>}
                 </Content>
                    
               </Layout>

@@ -6,34 +6,35 @@ class Team extends Component {
     render() {
         return (
             <div>
-                {data.map((el,i)=>{
-                    return (
+                {data.map((ele, i)=>{
+                    return(
                         <div key = {i}>
-                            <table className = "table">
-                                  <tr>
-                                  <th>ID</th>
-                                  <th>Name</th>
-                                  <th>Email</th>
-                                  <th>Designation</th>
-                                  </tr>
-
-                                <tr>
-                                 {el.team.map((dat, i)=>{
-                                     return (
-                                         <div key = {i}>
-                                             
-                                             <td >{dat.id}</td>
-                                             <td>{dat.name}</td>
-                                             <td>{dat.email}</td>
-                                             <td>{data.designation}</td>
-                                            
-                                         </div>
-                                     )
-                                 })}
-                                    
-                                  
-                                </tr>
+                            <table className= "table">
                                
+                                {
+                                    ele.team.map((el,i)=>{
+                                        return(
+                                            <div>
+                                                <tr>
+                                                    <th>
+                                                        id
+                                                    </th>
+                                                    <th>name</th>
+                                                    <th>email</th>
+                                                    <th>designation</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        {el.id}
+                                                    </td>
+                                                    <td>{el.name}</td>
+                                                    <td>{el.email}</td>
+                                                    <td>{el.designation}</td>
+                                                </tr>
+                                            </div>
+                                        )
+                                    })
+                                }
                             </table>
                         </div>
                     )
