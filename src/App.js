@@ -10,8 +10,10 @@ import Team from './Team';
 
 
 const MainComponent = ({match}) => {
+  console.log(match)
   return (
       <div>
+       
           <Header projectId = {match.params.projectId} />
           <Main projectId = {match.params.projectId}  />
           
@@ -29,7 +31,8 @@ class App extends Component {
     return (
       <Router>
        <Switch>
-         <Route path = '/:projectId' component ={MainComponent} />
+         <Route exact path   = "/">No Project Selected</Route>
+         <Route  path = '/:projectId' component ={MainComponent} ></Route>
 
         
        </Switch>

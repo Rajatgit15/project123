@@ -6,9 +6,11 @@ class Team extends Component {
         return (
             <div>
                 {data.map((el,i)=>{
+                    console.log(el)
                     return(
                         <div key = {i}>
-                            <table>
+                            <table className ="table">
+                                <tr>{el.title}</tr>
                                 {el.team.map((ele,i)=>{
                                     return (
                                         <div key = {i}>

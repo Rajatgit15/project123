@@ -7,7 +7,7 @@ import Team from './Team'
 
 const Main = (props) => {
 
-    
+        console.log(props)
     return (
         <div className  = "content">
             <ul>
@@ -16,7 +16,8 @@ const Main = (props) => {
               
             </ul>
             <Switch>
-            <Route exact path={`${props.projectId}/team`} component ={Team}></Route>
+                
+            <Route path=  {`/:${props.projectId}/team`} component ={Team}></Route>
             </Switch>
 
         </div>
